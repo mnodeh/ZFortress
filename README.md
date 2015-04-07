@@ -2,6 +2,6 @@
 
 Zombie survival game for iOS
 
-#Team Members
-Mohamed Odeh/n
-Raul Cano
+##Team Members
+* Mohamed Odeh
+* Raul Cano
