@@ -16,6 +16,10 @@
 		36E745331AD49B1300DAFAEB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 36E745321AD49B1300DAFAEB /* Images.xcassets */; };
 		36E745361AD49B1400DAFAEB /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36E745341AD49B1400DAFAEB /* LaunchScreen.xib */; };
 		36E745421AD49B1400DAFAEB /* Z_FortressTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 36E745411AD49B1400DAFAEB /* Z_FortressTests.m */; };
+		36E7454E1AD4AD1500DAFAEB /* darius3.png in Resources */ = {isa = PBXBuildFile; fileRef = 36E7454B1AD4AD1500DAFAEB /* darius3.png */; };
+		36E7454F1AD4AD1500DAFAEB /* darius2.png in Resources */ = {isa = PBXBuildFile; fileRef = 36E7454C1AD4AD1500DAFAEB /* darius2.png */; };
+		36E745501AD4AD1500DAFAEB /* darius.png in Resources */ = {isa = PBXBuildFile; fileRef = 36E7454D1AD4AD1500DAFAEB /* darius.png */; };
+		36E745521AD4AD8B00DAFAEB /* grassTile.png in Resources */ = {isa = PBXBuildFile; fileRef = 36E745511AD4AD8B00DAFAEB /* grassTile.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +49,10 @@
 		36E7453B1AD49B1400DAFAEB /* Z-FortressTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Z-FortressTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		36E745401AD49B1400DAFAEB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		36E745411AD49B1400DAFAEB /* Z_FortressTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Z_FortressTests.m; sourceTree = "<group>"; };
+		36E7454B1AD4AD1500DAFAEB /* darius3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = darius3.png; sourceTree = "<group>"; };
+		36E7454C1AD4AD1500DAFAEB /* darius2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = darius2.png; sourceTree = "<group>"; };
+		36E7454D1AD4AD1500DAFAEB /* darius.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = darius.png; sourceTree = "<group>"; };
+		36E745511AD4AD8B00DAFAEB /* grassTile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = grassTile.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +94,7 @@
 		36E7451F1AD49B1300DAFAEB /* Z-Fortress */ = {
 			isa = PBXGroup;
 			children = (
+				36E745531AD4E29900DAFAEB /* Graphics */,
 				36E745241AD49B1300DAFAEB /* AppDelegate.h */,
 				36E745251AD49B1300DAFAEB /* AppDelegate.m */,
 				36E745271AD49B1300DAFAEB /* GameScene.h */,
@@ -125,6 +134,17 @@
 				36E745401AD49B1400DAFAEB /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		36E745531AD4E29900DAFAEB /* Graphics */ = {
+			isa = PBXGroup;
+			children = (
+				36E7454C1AD4AD1500DAFAEB /* darius2.png */,
+				36E7454D1AD4AD1500DAFAEB /* darius.png */,
+				36E7454B1AD4AD1500DAFAEB /* darius3.png */,
+				36E745511AD4AD8B00DAFAEB /* grassTile.png */,
+			);
+			name = Graphics;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -207,9 +227,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				36E7454F1AD4AD1500DAFAEB /* darius2.png in Resources */,
 				36E745361AD49B1400DAFAEB /* LaunchScreen.xib in Resources */,
 				36E745331AD49B1300DAFAEB /* Images.xcassets in Resources */,
+				36E7454E1AD4AD1500DAFAEB /* darius3.png in Resources */,
 				36E7452B1AD49B1300DAFAEB /* GameScene.sks in Resources */,
+				36E745501AD4AD1500DAFAEB /* darius.png in Resources */,
+				36E745521AD4AD8B00DAFAEB /* grassTile.png in Resources */,
 				36E745311AD49B1300DAFAEB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

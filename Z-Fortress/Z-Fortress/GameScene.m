@@ -8,41 +8,47 @@
 
 #import "GameScene.h"
 
+@interface GameScene()
+
+@property SKNode *world;
+
+@end
+
 @implementation GameScene
 
--(void)didMoveToView:(SKView *)view {
-    /* Setup your scene here */
-    SKLabelNode *myLabel = [SKLabelNode labelNodeWithFontNamed:@"Chalkduster"];
+int tileEdge = 24;
+
+- (void)didMoveToView:(SKView *)view {
     
-    myLabel.text = @"Hello, World!";
-    myLabel.fontSize = 65;
-    myLabel.position = CGPointMake(CGRectGetMidX(self.frame),
-                                   CGRectGetMidY(self.frame));
+    [self loadMap];
     
-    [self addChild:myLabel];
 }
 
--(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
-    /* Called when a touch begins */
+- (void)loadMap {
     
-    for (UITouch *touch in touches) {
-        CGPoint location = [touch locationInNode:self];
-        
-        SKSpriteNode *sprite = [SKSpriteNode spriteNodeWithImageNamed:@"Spaceship"];
-        
-        sprite.xScale = 0.5;
-        sprite.yScale = 0.5;
-        sprite.position = location;
-        
-        SKAction *action = [SKAction rotateByAngle:M_PI duration:1];
-        
-        [sprite runAction:[SKAction repeatActionForever:action]];
-        
-        [self addChild:sprite];
+    //Map canvas
+    self.world = [SKNode node];
+    [self addChild:self.world];
+    
+    //Load grass onto world node
+    int x = 12;
+    for (int i = 0; i < 16  ; i++) {
+        int y = 12;
+        for (int j = 0; j < 28; j++) {
+            SKSpriteNode *grassTile = [SKSpriteNode spriteNodeWithImageNamed:@"grassTile.png"];
+            grassTile.position = CGPointMake(x, y);
+            [self.world addChild:grassTile];
+            y += tileEdge;
+        }
+        x += tileEdge;
     }
 }
 
--(void)update:(CFTimeInterval)currentTime {
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+    
+}
+
+- (void)update:(CFTimeInterval)currentTime {
     /* Called before each frame is rendered */
 }
 
