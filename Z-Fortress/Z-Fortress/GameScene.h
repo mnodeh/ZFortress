@@ -7,7 +7,17 @@
 //
 
 #import <SpriteKit/SpriteKit.h>
+#import "HeroClass.h"
+
 
 @interface GameScene : SKScene
+
+
+- (void)loadMap;
+- (void)loadHero;
+
++ (NSMutableArray *)extractSprites:(NSString *)spriteFileName;
+
+
 
 @end
