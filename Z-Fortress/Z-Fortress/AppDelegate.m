@@ -2,7 +2,6 @@
 //  AppDelegate.m
 //  Z-Fortress
 //
-//  Created by Mohamed Odeh on 4/7/15.
 //  Copyright (c) 2015 ECS 199. All rights reserved.
 //
 

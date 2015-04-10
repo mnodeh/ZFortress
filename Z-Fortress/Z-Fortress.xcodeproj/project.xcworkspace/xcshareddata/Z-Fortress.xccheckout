@@ -5,13 +5,13 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>85FB2AA2-41CD-435C-AF28-FFEDED7F5074</string>
+	<string>965FD7C5-B6B9-442A-9941-C9F10EBA826E</string>
 	<key>IDESourceControlProjectName</key>
 	<string>Z-Fortress</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>0EF14C0745195CF0C4BD6D071722EEB3EBAF0D70</key>
-		<string>https://github.com/mnodeh/ZFortress.git</string>
+		<string>https://github.com/mnodeh/ZFortress</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>Z-Fortress/Z-Fortress.xcodeproj</string>
@@ -21,7 +21,7 @@
 		<string>../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/mnodeh/ZFortress.git</string>
+	<string>https://github.com/mnodeh/ZFortress</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
