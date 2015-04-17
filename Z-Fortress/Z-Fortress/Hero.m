@@ -22,7 +22,7 @@ Hero *hero;
     
     NSMutableArray *initialHero = [GameScene extractSprites:@"heroWalkDown.png"];
     hero = [Hero spriteNodeWithTexture: initialHero[1]];
-    hero.position = CGPointMake(24, 24);
+    hero.position = CGPointMake(44, 44);
     hero.name = @"hero";
     
     return hero;

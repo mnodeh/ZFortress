@@ -12,6 +12,7 @@
 
 
 #import "GameScene.h"
+#import "Grid.h"
 
 @interface GameScene()
 
@@ -23,14 +24,29 @@
 @implementation GameScene
 
 int tileEdge = 32;
+// ---- 12 ----
+// |
+// |
+// 21
+// |
+// |
+// [col][row]
+int gridLayout[21][12];
+
 
 - (void)didMoveToView:(SKView *)view {
-    
+
     [self loadMap];
+    //[Grid initializeGrid:gridLayout];
+    //[Grid printGrid:gridLayout];
     [self loadHero];
     
     
 }
+
+
+
+
 
 - (void)loadMap {
     
@@ -43,10 +59,13 @@ int tileEdge = 32;
     for (int i = 0; i < 12  ; i++) {
         int y = 12;
         for (int j = 0; j < 21; j++) {
-            SKSpriteNode *grassTile = [SKSpriteNode spriteNodeWithImageNamed:@"grassTile.png"];
-            grassTile.size = CGSizeMake(32, 32);
-            grassTile.position = CGPointMake(x, y);
-            [self.world addChild:grassTile];
+            if (i%2 && j%2) {
+                SKSpriteNode *grassTile = [SKSpriteNode spriteNodeWithImageNamed:@"grassTile.png"];
+                grassTile.size = CGSizeMake(32, 32);
+                grassTile.position = CGPointMake(x, y);
+                [self.world addChild:grassTile];
+            }
+
             y += tileEdge;
         }
         x += tileEdge;
@@ -63,12 +82,23 @@ int tileEdge = 32;
 
     for (UITouch *touch in touches) {
         CGPoint touchLocation = [touch locationInNode:self];
-        
+        SKSpriteNode *spriteLocation = (SKSpriteNode*)[self nodeAtPoint:touchLocation];
+
+
+
+
+        CGPoint newPosition = [self snapToPosition:spriteLocation];
+        CGPoint gridPosition = [Grid getGridPos:newPosition];
+        //NSLog(@"X: %i,  Y: %i ", (int)gridPosition.x, (int)gridPosition.y);
+        [Grid markGridLocation:gridLayout :gridPosition];
+        [Grid printGrid:gridLayout];
+        [Grid resetGridLocation:gridLayout :gridPosition];
+
+
         [self.hero removeAllActions];
-        [self.hero walkTo:touchLocation];
+        [self.hero walkTo:newPosition];
     }
 }
-
 
 // Extracts sprites from vertical sheet
 + (NSMutableArray *)extractSprites:(NSString *)spriteFileName {
@@ -88,8 +118,33 @@ int tileEdge = 32;
     return spriteArray;
 }
 
+-(CGPoint)snapToPosition:(SKSpriteNode *)spriteLocation {
+    CGPoint newPosition;
+    
+    newPosition.x = 12 + 32 * floor((spriteLocation.position.x / 32) + 0.5);
+    newPosition.y = 12 + 32 * floor((spriteLocation.position.y / 32) + 0.5);
+
+    return newPosition;
+}
+
+
+
 - (void)update:(CFTimeInterval)currentTime {
     /* Called before each frame is rendered */
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 @end
