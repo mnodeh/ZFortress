@@ -17,6 +17,7 @@
 		36E745361AD49B1400DAFAEB /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36E745341AD49B1400DAFAEB /* LaunchScreen.xib */; };
 		36E745421AD49B1400DAFAEB /* Z_FortressTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 36E745411AD49B1400DAFAEB /* Z_FortressTests.m */; };
 		36E745521AD4AD8B00DAFAEB /* grassTile.png in Resources */ = {isa = PBXBuildFile; fileRef = 36E745511AD4AD8B00DAFAEB /* grassTile.png */; };
+		D72AE71B1AE083E40028F82C /* Grid.m in Sources */ = {isa = PBXBuildFile; fileRef = D72AE71A1AE083E40028F82C /* Grid.m */; };
 		D75B5E9D1AD60526000E00F8 /* heroWalkDown.png in Resources */ = {isa = PBXBuildFile; fileRef = D75B5E991AD60526000E00F8 /* heroWalkDown.png */; };
 		D75B5E9E1AD60526000E00F8 /* heroWalkLeft.png in Resources */ = {isa = PBXBuildFile; fileRef = D75B5E9A1AD60526000E00F8 /* heroWalkLeft.png */; };
 		D75B5E9F1AD60526000E00F8 /* heroWalkRight.png in Resources */ = {isa = PBXBuildFile; fileRef = D75B5E9B1AD60526000E00F8 /* heroWalkRight.png */; };
@@ -52,6 +53,8 @@
 		36E745401AD49B1400DAFAEB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		36E745411AD49B1400DAFAEB /* Z_FortressTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Z_FortressTests.m; sourceTree = "<group>"; };
 		36E745511AD4AD8B00DAFAEB /* grassTile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = grassTile.png; sourceTree = "<group>"; };
+		D72AE7191AE083E40028F82C /* Grid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Grid.h; sourceTree = "<group>"; };
+		D72AE71A1AE083E40028F82C /* Grid.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Grid.m; sourceTree = "<group>"; };
 		D75B5E991AD60526000E00F8 /* heroWalkDown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = heroWalkDown.png; sourceTree = "<group>"; };
 		D75B5E9A1AD60526000E00F8 /* heroWalkLeft.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = heroWalkLeft.png; sourceTree = "<group>"; };
 		D75B5E9B1AD60526000E00F8 /* heroWalkRight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = heroWalkRight.png; sourceTree = "<group>"; };
@@ -106,6 +109,8 @@
 				36E745281AD49B1300DAFAEB /* GameScene.m */,
 				D75B5EA11AD613C7000E00F8 /* Hero.h */,
 				D75B5EA21AD613C7000E00F8 /* Hero.m */,
+				D72AE7191AE083E40028F82C /* Grid.h */,
+				D72AE71A1AE083E40028F82C /* Grid.m */,
 				36E7452A1AD49B1300DAFAEB /* GameScene.sks */,
 				36E7452C1AD49B1300DAFAEB /* GameViewController.h */,
 				36E7452D1AD49B1300DAFAEB /* GameViewController.m */,
@@ -262,6 +267,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D75B5EA31AD613C7000E00F8 /* Hero.m in Sources */,
+				D72AE71B1AE083E40028F82C /* Grid.m in Sources */,
 				36E7452E1AD49B1300DAFAEB /* GameViewController.m in Sources */,
 				36E745261AD49B1300DAFAEB /* AppDelegate.m in Sources */,
 				36E745291AD49B1300DAFAEB /* GameScene.m in Sources */,
